@@ -9,9 +9,7 @@ module Svg.Extra
 @docs static
 -}
 
-import Basics.Extra
 import Svg exposing (Svg)
-import VirtualDom
 
 
 {-| Embedding static svg.
@@ -29,4 +27,4 @@ to enforce the staticness. That is what this function provides.
 -}
 static : Svg Never -> Svg msg
 static =
-    VirtualDom.map Basics.Extra.never
+    Svg.map never
